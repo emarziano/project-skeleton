@@ -2,7 +2,7 @@ import torchvision.transforms as T
 from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
 
-def get_tinyimagenet_dataloaders(root="data/tiny-imagenet-200", batch_size=32, num_workers=2):
+def get_tinyimagenet_dataloaders(root="dataset/tiny-imagenet-200", batch_size=32, num_workers=2):
     transform = T.Compose([
         T.Resize((224, 224)),
         T.RandomHorizontalFlip(p=0.5),
